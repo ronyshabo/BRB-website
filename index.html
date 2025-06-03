@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRB Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .navbar-links {
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <img src="assets/BRB Profile.jpg" alt="Coffee Shop Logo" class="navbar-logo" id="navbar-logo" />
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#intro">Who We Are</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#intro">Who We Are</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#instagram">Instagram</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Sections -->
+    <section id="intro" class="split-section">
+        <div class="split-image">
+            <img src="assets/inside.png" alt="BRB Coffee Logo" />
+        </div>
+        <div class="split-text">
+            <h2>Who We Are</h2>
+            <p>Welcome to BRB Coffee Shop! We serve the best coffee in town...</p>
+        </div>
+    </section>
+
+    <section id="menu" class="split-section reverse">
+        <div class="split-text menu-section">
+            <h2>Menu</h2>
+            <div class="menu-lists">
+                <div class="menu-category">
+                    <h3>Coffee</h3>
+                    <ul>
+                        <li>Drip <span>$3.00</span></li>
+                        <li>Espresso <span>$3.00</span></li>
+                        <li>Americano <span>$3.50 - $4.00</span></li>
+                        <li>Cold Brew <span>$3.50 - $4.00</span></li>
+                        <li>Macchiato <span>$4.00</span></li>
+                        <li>Cortado <span>$4.00</span></li>
+                        <li>Cappuccino <span>$4.50</span></li>
+                        <li>Latte <span>$5.00 - $5.50</span></li>
+                        <li>Mocha <span>$5.50 - $6.00</span></li>
+                    </ul>
+                    <div style="font-size:0.95em; color:#b85b3a; margin-top:0.5em;">
+                        * Alternative milk +$1.00
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Teas</h3>
+                    <ul>
+                        <li>Hot Tea <span>$3.00</span></li>
+                        <li>Iced Tea <span>$3.50</span></li>
+                        <li>Matcha Latte <span>$5.50 - $6.00</span></li>
+                        <li>Chai Tea <span>$5.50 - $6.00</span></li>
+                        <li>Golden Milk <span>$5.50 - $6.00</span></li>
+                        <li>Hot Chocolate <span>$5.50</span></li>
+                    </ul>
+                    <div style="font-size:0.95em; color:#b85b3a; margin-top:0.5em;">
+                        * Alternative milk +$1.00
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Bites</h3>
+                    <ul>
+                        <li>Olive Pie <span>$4.00</span></li>
+                        <li>Cheese Pie <span>$4.00</span></li>
+                        <li>Za'atar Pie <span>$4.00</span></li>
+                        <li>Cookies <span>$1.50</span></li>
+                        <li>Baklava <span>$4.00</span></li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Decaf</h3>
+                    <ul>
+                        <li>Blush Tonic <span>$4.50</span></li>
+                        <li>Italian Soda <span>$4.50</span></li>
+                        <li>Mojito Mocktail <span>$4.50</span></li>
+                        <li>Decaf Tea <span>$3.00</span></li>
+                        <li>Lemonade <span>$3.50</span></li>
+                        <li>Topo Chico <span>$2.5</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- No image div here -->
+    </section>
+
+    <section id="instagram" class="split-section">
+        <div class="split-image">
+            <img src="assets/outside.png" alt="BRB Coffee Window Logo" />
+        </div>
+        <div class="split-text">
+            <h2>Instagram</h2>
+            <div class="instagram-feed">
+                <!-- Instagram plugin or images here -->
+                <blockquote class="instagram-media instagram-embed-custom"
+                    data-instgrm-permalink="https://www.instagram.com/brbcoffee_atx/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14">
+                    <!-- ...Instagram embed content... -->
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="split-section">
+        <div class="split-text">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="split-image">
+            <!-- Place your map widget here -->
+            <div style="overflow:hidden;max-width:100%;width:500px;height:500px;">
+                <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                        src="https://www.google.com/maps/embed/v1/place?q=brb+coffee+austin+tx&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                    </iframe>
+                </div>
+                <a class="our-googlemap-code" rel="nofollow" href="https://kbj9qpmy.com/bp" id="grab-map-info"
+                    style="display:none;">Internet Provider</a>
+                <style>
+                    #display-google-map img.text-marker {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+
+                    img {
+                        max-width: none
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 BRB Coffee Shop</p>
+    </footer>
+
+    <script>
+        let lastScrollY = window.scrollY;
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const logo = document.getElementById("navbar-logo");
+            const navbarLinks = document.getElementById("navbar-links");
+
+            // Navbar style changes
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-scrolled");
+                logo.style.height = "100px";
+                logo.style.margin = "0 auto";
+                logo.style.display = "block";
+                logo.style.position = "absolute";
+                logo.style.left = "50%";
+                logo.style.transform = "translateX(-50%)";
+            } else {
+                navbar.classList.remove("navbar-scrolled");
+                logo.style.height = "40px";
+                logo.style.margin = "";
+                logo.style.display = "";
+                logo.style.position = "";
+                logo.style.left = "";
+                logo.style.transform = "";
+            }
+
+            // Hide/show navbar links based on scroll direction
+            if (window.scrollY > lastScrollY && window.scrollY > 50) {
+                // Scrolling down
+                navbarLinks.style.opacity = "0";
+                navbarLinks.style.pointerEvents = "none";
+            } else {
+                // Scrolling up
+                navbarLinks.style.opacity = "1";
+                navbarLinks.style.pointerEvents = "auto";
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+
+</html>
