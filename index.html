@@ -42,7 +42,9 @@
         </div>
         <div class="split-text">
             <h2>Who We Are</h2>
-            <p>Welcome to BRB Coffee Shop! We serve the best coffee in town...</p>
+            <p>Welcome to BRB Coffee! we are a unique coffee shop 
+            that would make your mundane laundry day much more toralble 
+        we Know you'll BRB </p>
         </div>
     </section>
 
@@ -87,8 +89,8 @@
                         <li>Olive Pie <span>$4.00</span></li>
                         <li>Cheese Pie <span>$4.00</span></li>
                         <li>Za'atar Pie <span>$4.00</span></li>
-                        <li>Cookies <span>$1.50</span></li>
                         <li>Baklava <span>$4.00</span></li>
+                        <li>Cookies <span>$1.50</span></li>
                     </ul>
                 </div>
                 <div class="menu-category">
@@ -128,10 +130,8 @@
     <section id="contact" class="split-section">
         <div class="split-text">
             <h2>Contact Us</h2>
-            <form class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-
+            <form class="contact-form" action="https://formspree.io/f/xyzjweov"
+            method="POST">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required />
 
@@ -189,7 +189,7 @@ window.addEventListener("scroll", function () {
     // Scrolling down
     navbar.style.background = "transparent";
     logo.style.height = "150px";
-    logo.style.transform = "translateX(1200px)";
+    logo.style.transform = "translateX(2000px)";
     navbarLinks.style.opacity = "0";
     navbarLinks.style.pointerEvents = "none";
   } else if (window.scrollY < lastScrollY) {
@@ -203,6 +203,20 @@ window.addEventListener("scroll", function () {
 
   lastScrollY = window.scrollY;
 });
+document.querySelectorAll('.menu-category span').forEach(el => {
+    // Remove the $ and split by ranges like "$3.50 - $4.00"
+    let text = el.textContent.trim().replace(/\$/g, '');
+    let parts = text.split('-').map(part => parseFloat(part.trim()));
+
+    // Format each part
+    let formatted = parts.map(price => {
+      if (isNaN(price)) return ''; // Skip if not a number
+      return price % 1 === 0 ? price.toFixed(0) : price.toFixed(2);
+    });
+
+    // Rebuild and reinsert the content with $ sign
+    el.textContent = '$' + formatted.join(' - $');
+  });
     </script>
 </body>
 

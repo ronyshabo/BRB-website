@@ -18,7 +18,7 @@ body {
   background: var(--mocka);
   padding: 1rem 2rem;
   position: fixed;
-  width: 90%;
+  width: 95%;
   top: 0;
   left: 0;
   z-index: 100;
@@ -153,8 +153,7 @@ body {
 }
 
 .menu-category {
-  flex: 1 1 200px;
-  min-width: 170px;
+  flex: 1 1 240px;
   max-width: 240px;
   background: #fff;
   border-radius: 12px;
@@ -173,26 +172,26 @@ body {
 .menu-category ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .menu-category li {
-  margin-bottom: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
-  white-space: nowrap; /* Prevent wrapping */
-  gap: 1rem;
+  white-space: nowrap;
+  padding: 0 0.5rem; /* Add side padding */
+  box-sizing: border-box;
 }
 
 .menu-category li span {
   color: #555;
   font-weight: normal;
-  margin-left: 1rem;
-  white-space: nowrap; /* Prevent wrapping for price */
-  min-width: 80px;     /* Optional: reserve space for price */
   text-align: right;
+  flex-shrink: 0;         /* Prevent it from shrinking */
+  width: 70px;            /* Reserve a consistent space for prices */
+  margin-left: 1rem;
 }
 
 /* Burger menu for mobile */
